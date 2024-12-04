@@ -1,4 +1,4 @@
-# Forked for Demo - eShop Reference Application - "AdventureWorks"
+# Forked for L&L Demo - eShop Reference Application - "AdventureWorks"
 
 A reference .NET application implementing an e-commerce website using a services-based architecture using [.NET Aspire](https://learn.microsoft.com/dotnet/aspire/).
 
@@ -140,3 +140,25 @@ The sample catalog data is defined in [catalog.json](https://github.com/dotnet/e
 ## eShop on Azure
 
 For a version of this app configured for deployment on Azure, please view [the eShop on Azure](https://github.com/Azure-Samples/eShopOnAzure) repo.
+
+---
+
+# Adjustments to Get this Running on a Mac
+
+## Locally
+
+* Install the latest .NET 
+* Install Maui Workload ` sudo dotnet workload install maui` - https://aka.ms/macios-missing-xcode 
+* Install and Set up Xcode
+  * Download and install XCode from App Store
+  * Run `sudo xcode-select -s /Applications/Xcode.app/Contents/Developer`
+  * Run `xcode-select -p` and it should show `/Applications/Xcode.app/Contents/Developer`
+  * Run `sudo xcodebuild -license` and agree to the license
+  * Run `xcodebuild -runFirstLaunch`
+* Install the latest Android SDK - https://aka.ms/dotnet-android-install-sdk
+  * Install Android Studio https://developer.android.com/studio and go through the 
+    * Access the SDK Manager to download and install additional SDK versions, System Images and Tools 
+      * Settings > Languages and Frameworks > Android SDK 
+
+* When running for the first time `cd` into the root folder and run `sudo dotnet workload restore` 
+* Then `dotnet restore` for any subsequent ones 
